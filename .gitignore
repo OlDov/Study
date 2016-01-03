@@ -8,7 +8,7 @@
 *.iml
 *.iws
 
-#log file
+#mylog file
 myLog.txt
 
 # Mac
