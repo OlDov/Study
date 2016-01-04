@@ -5,6 +5,7 @@ import com.dovgan.spring.core.Event;
 import org.apache.commons.io.FileUtils;
 import sun.jvm.hotspot.runtime.*;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.lang.annotation.Inherited;
@@ -31,6 +32,7 @@ public class FileEventLogger implements EventLogger{
         }
     }
 
+    @PostConstruct
     private void init() throws IOException{
         System.out.println("context init... class:"+ getClass().getName() + " parent:" + getClass().getSuperclass().getName());
         file = new File(fileName);

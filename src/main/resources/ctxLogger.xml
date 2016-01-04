@@ -17,8 +17,10 @@
             <bean class="java.util.Date"/>
         </constructor-arg>
     </bean>
+
     <!--loggers-->
     <bean id="EventLoggerConsole" class="com.dovgan.spring.core.loggers.ConsoleEventLogger"/>
+
     <bean id="EventLoggerFile" class="com.dovgan.spring.core.loggers.FileEventLogger" init-method="init"
             c:fileName="${logPath}">
     </bean>

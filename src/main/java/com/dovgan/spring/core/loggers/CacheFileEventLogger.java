@@ -4,6 +4,7 @@ import com.dovgan.spring.core.App;
 import com.dovgan.spring.core.Event;
 import org.apache.commons.io.FileUtils;
 
+import javax.annotation.PreDestroy;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class CacheFileEventLogger extends FileEventLogger {
 
     }
 
+    @PreDestroy
     private void destroy() {
         System.out.println("ctxDestroing...");
         if (!cache.isEmpty()) {

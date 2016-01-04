@@ -4,9 +4,15 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:ctx="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--use annotations-->
+    <ctx:annotation-config/>
+    <ctx:component-scan base-package="com.dovgan.spring"/>
+
     <!--import other loggers-->
     <import resource="ctxLogger.xml"/>
 
@@ -32,19 +38,18 @@
     <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
 
     <!--beans-->
-    <bean id="client" class="com.dovgan.spring.core.beans.Client"
-          p:greeting="${greeting}"
-          c:id="${id}"
-          c:name="${name}">
-    </bean>
+    <!--<bean id="client" class="com.dovgan.spring.core.beans.Client"-->
+          <!--p:greeting="${greeting}"-->
+          <!--c:id="${id}"-->
+          <!--c:name="${name}">-->
+    <!--</bean>-->
 
-    <bean id="App" class="com.dovgan.spring.core.App"
-            c:c-ref="client"
-          c:logger-ref="EventLoggerCombiner">
+    <!--<bean id="App" class="com.dovgan.spring.core.App">-->
+    <!--c:logger-ref="EventLoggerCombiner"-->
     <!--c:logger-ref="EventLogger"-->
     <!--c:logger-ref="EventLoggerFile"-->
     <!--c:logger-ref="EventLoggerFile"-->
-   </bean>
+   <!--</bean>-->
 
     <!--<bean id="listener" class="com.dovgan.spring.listener.Monitor" />-->
 
