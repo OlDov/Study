@@ -3,6 +3,7 @@ package com.dovgan.spring.core.loggers;
 import com.dovgan.spring.core.App;
 import com.dovgan.spring.core.Event;
 import org.apache.commons.io.FileUtils;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
 import java.io.File;

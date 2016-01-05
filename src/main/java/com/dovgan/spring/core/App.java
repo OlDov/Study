@@ -26,7 +26,7 @@ public class App {
     private Client c;
 
     @Autowired
-    @Qualifier("EventLoggerCombiner")
+    @Qualifier("combinedEventLogger")
     private EventLogger logger;
 
 //        public App(EventLogger logger) {

@@ -1,6 +1,7 @@
 package com.dovgan.spring.core.loggers;
 import com.dovgan.spring.core.App;
 import com.dovgan.spring.core.Event;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -9,7 +10,6 @@ import java.util.Map;
 /**
  * Created by alexdovgan on 12/22/15.
  */
-//@Component
 public class CombinedEventLogger implements EventLogger{
     private EventLogger defaultLogger;
     private String ss;
@@ -30,6 +30,7 @@ public class CombinedEventLogger implements EventLogger{
     }
 
     public CombinedEventLogger(Map<App.EventType, EventLogger> loggers) {
+
         this.loggers = loggers;
     }
 

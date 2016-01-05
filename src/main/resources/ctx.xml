@@ -10,32 +10,32 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <!--use annotations-->
-    <ctx:annotation-config/>
-    <ctx:component-scan base-package="com.dovgan.spring"/>
+    <!--<ctx:annotation-config/>-->
+    <!--<ctx:component-scan base-package="com.dovgan.spring"/>-->
 
     <!--import other loggers-->
-    <import resource="ctxLogger.xml"/>
+    <!--<import resource="ctxLogger.xml"/>-->
 
     <!--properties-->
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-            p:ignoreResourceNotFound="true">
-        <property name="locations">
-            <list>
-                <value>classpath:client.properties</value>
-            </list>
-        </property>
-        <property name="systemPropertiesMode">
-            <util:constant static-field= "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE" />
-        </property>
-    </bean>
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"-->
+            <!--p:ignoreResourceNotFound="true">-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath:client.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="systemPropertiesMode">-->
+            <!--<util:constant static-field= "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE" />-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <util:map id="loggerMap">
-        <entry key="INFO" value-ref="EventLoggerConsole" />
-        <entry key="ERROR" value-ref="EventLoggerFileCache"/>
-    </util:map>
+    <!--<util:map id="loggerMap">-->
+        <!--<entry key="INFO" value-ref="EventLoggerConsole" />-->
+        <!--<entry key="ERROR" value-ref="EventLoggerFileCache"/>-->
+    <!--</util:map>-->
 
     <!--Date formatter-->
-    <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
+    <!--<bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>-->
 
     <!--beans-->
     <!--<bean id="client" class="com.dovgan.spring.core.beans.Client"-->
