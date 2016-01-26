@@ -44,6 +44,7 @@
     </bean>
 
     <bean id="App" class="com.dovgan.spring.core.App"
+          p:statistic-ref="aop"
             c:c-ref="client"
           c:logger-ref="EventLoggerCombiner">
     <!--c:logger-ref="EventLogger"-->

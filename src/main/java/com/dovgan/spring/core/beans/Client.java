@@ -1,8 +1,13 @@
 package com.dovgan.spring.core.beans;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by alexdovgan on 12/18/15.
  */
+@Setter
+@Getter
 public class Client {
     private Integer id;
     private String name;
@@ -17,13 +22,13 @@ public class Client {
         this.name = name;
         System.out.println("Client " + id + " " + name + "created");
     }
-
-    public String getGreeting() {
-        return greeting;
-    }
-
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
-    }
+//
+//    public String getGreeting() {
+//        return greeting;
+//    }
+//
+//    public void setGreeting(String greeting) {
+//        this.greeting = greeting;
+//    }
 
 }

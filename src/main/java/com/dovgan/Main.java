@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Map;
+
 /**
  * Created by alexovgan on 12/20/15.
  */
@@ -25,8 +27,9 @@ public class Main {
         e = (Event)ctx.getBean("Ev");
         e.setMsg("ERROR");
         app.logEvent(App.EventType.ERROR, (Event)ctx.getBean("Ev"));
-//        StatisticsAspect a = (StatisticsAspect)ctx.getBean("StatisticsAspect");
-//        a.
+        for (Map.Entry<Class<?>, Integer> s : app.getStatistic().entrySet())
+            System.out.println(s.getKey()+ "=" + s.getValue());
+        System.out.println("===============");
         ctx.close();
     }
 }
