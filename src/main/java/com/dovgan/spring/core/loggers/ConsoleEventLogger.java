@@ -9,6 +9,6 @@ import com.dovgan.spring.core.Event;
 public class ConsoleEventLogger implements EventLogger{
 
     public void eventLog(App.EventType type, Event e) {
-        System.out.println(e.toString());
+        System.out.println(e.toString()+"----");
     }
 }
